@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeknoReka - Innovative Digital Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="TeknoReka Logo" class="logo-img">
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="menu-btn" aria-label="Toggle Menu">
+                <div class="menu-btn__lines"></div>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu__links">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content" data-aos="fade-right">
+                <h1 class="glitch" data-text="Premium Solutions, Smart Pricing">Premium Solutions, Smart Pricing</h1>
+                <p class="hero-text">Elevate your business with enterprise-grade technology solutions that don't break the bank. We deliver excellence without the premium price tag.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="cta-button primary">Explore Our Work</a>
+                    <a href="#contact" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
+            <div class="hero-visual" data-aos="fade-left">
+                <div class="hero-sphere">
+                    <div class="sphere-animation">
+                        <!-- Sphere elements will be added via JS -->
+                    </div>
+                </div>
+                <div class="floating-elements">
+                    <div class="float-item" data-speed="2"><i class="fas fa-code"></i></div>
+                    <div class="float-item" data-speed="3"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="float-item" data-speed="4"><i class="fas fa-brain"></i></div>
+                    <div class="float-item" data-speed="3"><i class="fas fa-database"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrows">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications">
+        <div class="cert-container">
+            <div class="cert-header" data-aos="fade-up">
+                <h2>Apple Certified Development Team</h2>
+                <p>Recognized excellence in iOS development and Apple technologies</p>
+            </div>
+            
+            <div class="cert-grid">
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cert-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>App Development with Swift</h3>
+                    <p>Associate Certification</p>
+                    <div class="cert-badge">
+                        <img src="swiftassoc.png" alt="Swift Associate Certificate" class="cert-image-assoc">
+                    </div>
+                    <div class="cert-details">
+                        <ul>
+                            <li>Professional iOS Development</li>
+                            <li>Swift Programming Expertise</li>
+                            <li>Apple Development Standards</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="cert-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Apple Teacher Swift Playground</h3>
+                    <p>Playground Certification</p>
+                    <div class="cert-badge">
+                        <img src="appleteacher.png" alt="Apple Teacher Certificate" class="cert-image">
+                    </div>
+                    <div class="cert-details">
+                        <ul>
+                            <li>Certified Teaching Methods</li>
+                            <li>Apple Education Expert</li>
+                            <li>Interactive Learning Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Comprehensive digital solutions tailored to your needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-content">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>IT Solutions & Consultation</h3>
+                    <p>Enterprise-grade IT solutions that streamline your operations and enhance productivity.</p>
+                    <ul class="service-features">
+                        <li>System Integration</li>
+                        <li>Network Solutions</li>
+                        <li>IT Infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-content">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>System Development</h3>
+                    <p>Custom software systems designed to automate and optimize your business processes.</p>
+                    <ul class="service-features">
+                        <li>Custom Software</li>
+                        <li>Process Automation</li>
+                        <li>System Integration</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-content">
+                    <div class="service-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>iOS Development</h3>
+                    <p>Professional iOS applications with cutting-edge features and seamless user experience.</p>
+                    <ul class="service-features">
+                        <li>Native iOS Apps</li>
+                        <li>UI/UX Design</li>
+                        <li>App Maintenance</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-content">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Modern and responsive websites with powerful functionality and maintenance support.</p>
+                    <ul class="service-features">
+                        <li>Custom Websites</li>
+                        <li>Web Applications</li>
+                        <li>Maintenance Services</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Featured Project</h2>
+            <p class="section-subtitle">Innovation in action</p>
+        </div>
+        <div class="projects-showcase">
+            <div class="project-card" data-aos="fade-up">
+                <div class="project-content">
+                    <h3>MMU ViBE</h3>
+                    <p>An innovative AR-powered space management system that revolutionizes how users interact with and book spaces in real-time.</p>
+                    <div class="project-tech">
+                        <span>Augmented Reality</span>
+                        <span>Swift/SwiftUI</span>
+                        <span>AI/ML</span>
+                        <span>Computer Vision</span>
+                    </div>
+                    <ul class="project-features">
+                        <li>Real-time AR space visualization</li>
+                        <li>AI-powered booking recommendations</li>
+                        <li>Interactive 3D space mapping</li>
+                        <li>Smart capacity management</li>
+                    </ul>
+                    <a href="https://mmuvibe.my" target="_blank" rel="noopener noreferrer" class="project-link-button">Visit Website <i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="project-image">
+                    <img src="mmuvibe.png" 
+                         alt="AR Visualization Interface"
+                         loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <p>Let's discuss how we can help transform your business</p>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@teknoreka.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+6017-3814546</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Klang, Selangor, Malaysia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="TeknoReka Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">IT Solutions</a></li>
+                        <li><a href="#">iOS Development</a></li>
+                        <li><a href="#">System Development</a></li>
+                        <li><a href="#">IT Consultation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Work</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TeknoReka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
