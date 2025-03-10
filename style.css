@@ -783,8 +783,7 @@ nav {
     transform-style: preserve-3d;
     perspective: 1000px;
     width: 100%;
-    height: auto;
-    min-height: 300px;
+    height: 300px; /* Fixed height instead of auto */
 }
 
 .project-image img {
@@ -793,9 +792,6 @@ nav {
     object-fit: cover;
     transition: transform 0.5s ease;
     display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .project-card:hover .project-image img {
@@ -854,7 +850,7 @@ nav {
     .project-content {
         order: 1;
         text-align: left;
-        padding: 0 1rem;
+        padding: 0;
     }
 
     .project-content h3 {
@@ -863,17 +859,9 @@ nav {
 
     .project-image {
         order: 0;
-        margin: -2rem -2rem 2rem;
-        border-radius: 20px;
-        width: calc(100% + 4rem);
-        min-height: 250px;
-    }
-
-    .project-image img {
-        position: absolute;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 250px;
+        margin: 0 0 1rem 0;
     }
 }
 
@@ -900,10 +888,9 @@ nav {
     }
 
     .project-image {
-        margin: -1.5rem -1.5rem 1.5rem;
-        border-radius: 15px;
-        width: calc(100% + 3rem);
-        min-height: 200px;
+        height: 200px;
+        margin: 0 0 1rem 0;
+        width: 100%;
     }
 }
 
@@ -1628,18 +1615,24 @@ and (orientation: landscape) {
     .hero {
         padding: 90px 2rem 2rem;
         min-height: 100vh;
+        display: flex;
+        align-items: flex-start; /* Changed from center to flex-start */
+        padding-top: 120px; /* Increased top padding */
     }
 
     .hero-container {
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-        margin-bottom: 3rem;
+        gap: 3rem;
+        margin-bottom: 2rem;
         padding: 0;
+        align-items: center;
+        max-width: 1000px;
     }
 
     .hero-content {
         margin-top: 0;
         order: 0;
+        padding-top: 2rem;
     }
 
     .hero-visual {
@@ -1669,77 +1662,109 @@ and (orientation: landscape) {
 
     /* Project card fixes for iPad landscape */
     .project-card {
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        padding: 2.5rem;
         gap: 3rem;
-        align-items: center;
+        padding: 3rem;
+        align-items: flex-start;
+        position: relative;
     }
 
     .project-content {
         order: 0;
         text-align: left;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        position: relative;
     }
 
     .project-image {
         order: 1;
         margin: 0;
         width: 100%;
-        min-height: 300px;
+        height: 100%;
+        min-height: 350px;
+        position: relative;
+        align-self: stretch;
     }
 
-    .project-content h3 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+    .project-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .project-tech {
-        justify-content: flex-start;
-        margin: 1.5rem 0;
-    }
-
-    .project-tech span {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+    .project-link-button {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 2rem;
     }
 }
 
-/* Adjust the existing tablet breakpoint to not conflict with iPad landscape */
-@media (max-width: 992px) {
-    .hero {
-        padding: 70px 1.5rem 8rem;
+/* Mobile styles for project card */
+@media (max-width: 480px) {
+    .project-card {
+        padding: 1.5rem;
     }
 
-    .hero-container {
-        margin-bottom: 6rem;
+    .project-content {
+        padding: 0;
     }
 
-    /* Only apply these styles if NOT in landscape mode */
-    @media (orientation: portrait) {
-        .hero-container {
-            grid-template-columns: 1fr;
-        }
-
-        .hero-content {
-            order: 1;
-        }
-
-        .hero-visual {
-            order: 0;
-        }
-
-        .project-card {
-            grid-template-columns: 1fr;
-        }
-
-        .project-content {
-            order: 1;
-        }
-
-        .project-image {
-            order: 0;
-            margin: -2rem -2rem 2rem;
-            width: calc(100% + 4rem);
-        }
+    .project-image {
+        width: 100%;
+        height: 250px;
+        margin: 0 0 1.5rem 0;
+        position: relative;
     }
+
+    .project-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Base project card styles */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.project-image {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 350px;
+}
+
+.project-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
