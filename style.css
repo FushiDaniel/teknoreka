@@ -1619,3 +1619,127 @@ footer {
         bottom: 2rem;
     }
 }
+
+/* iPad (landscape) specific styles */
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (orientation: landscape) {
+    .hero {
+        padding: 90px 2rem 2rem;
+        min-height: 100vh;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 0;
+    }
+
+    .hero-content {
+        margin-top: 0;
+        order: 0;
+    }
+
+    .hero-visual {
+        order: 1;
+        margin-top: 0;
+    }
+
+    .hero-sphere {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cta-group {
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 2rem 0;
+        max-width: none;
+    }
+
+    .cta-button {
+        width: auto;
+    }
+
+    .scroll-indicator {
+        bottom: 1rem;
+    }
+
+    /* Project card fixes for iPad landscape */
+    .project-card {
+        grid-template-columns: 1fr 1fr;
+        padding: 2.5rem;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .project-content {
+        order: 0;
+        text-align: left;
+        padding: 0;
+    }
+
+    .project-image {
+        order: 1;
+        margin: 0;
+        width: 100%;
+        min-height: 300px;
+    }
+
+    .project-content h3 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-tech {
+        justify-content: flex-start;
+        margin: 1.5rem 0;
+    }
+
+    .project-tech span {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjust the existing tablet breakpoint to not conflict with iPad landscape */
+@media (max-width: 992px) {
+    .hero {
+        padding: 70px 1.5rem 8rem;
+    }
+
+    .hero-container {
+        margin-bottom: 6rem;
+    }
+
+    /* Only apply these styles if NOT in landscape mode */
+    @media (orientation: portrait) {
+        .hero-container {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-content {
+            order: 1;
+        }
+
+        .hero-visual {
+            order: 0;
+        }
+
+        .project-card {
+            grid-template-columns: 1fr;
+        }
+
+        .project-content {
+            order: 1;
+        }
+
+        .project-image {
+            order: 0;
+            margin: -2rem -2rem 2rem;
+            width: calc(100% + 4rem);
+        }
+    }
+}
