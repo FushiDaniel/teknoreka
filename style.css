@@ -1243,21 +1243,46 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 60px 1rem 4rem;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    .hero-container {
+        margin-bottom: 5rem;
+    }
+
+    .hero-content {
+        margin-top: -1rem;
+    }
+
+    .hero-visual {
+        margin-top: -1rem;
+    }
+
+    .hero-sphere {
+        width: 220px;
+        height: 220px;
+    }
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .cta-group {
         flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 2rem auto 0;
     }
 
-    .footer-links {
-        grid-template-columns: 1fr;
+    .cta-button {
+        width: 100%;
     }
 
-    .project-tech {
-        flex-wrap: wrap;
-        justify-content: center;
+    .scroll-indicator {
+        bottom: 1rem;
     }
 }
 
